@@ -75,8 +75,8 @@ The goal of this project is to create a robust and scalable API that enables ful
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/MayaVictDias/gerenciamento-cursos-online.git
-   cd gerenciamento-cursos-online
+   git clone https://github.com/MayaVictDias/online-course-management.git
+   cd online-course-management
 
 
 2. Start the PostgreSQL container using Docker:
