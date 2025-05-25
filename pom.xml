@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.dias.mayara</groupId>
-	<artifactId>gerenciamento-cursos-online</artifactId>
+	<artifactId>online_courses_management</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>Sistema de Gerenciamento de Cursos Online</name>
-	<description>API RESTful para gerenciar cursos, instrutores, alunos e matrículas</description>
+	<name>Online Courses Management System</name>
+	<description>RESTful API for managing courses, instructors, students and enrollments</description>
 	<url/>
 	<licenses>
 		<license/>

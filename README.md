@@ -1,125 +1,93 @@
-# 🎓 Sistema de Gerenciamento de Cursos Online
+# 🎓 Online Course Management System
 
-API RESTful desenvolvida em **Java com Spring Boot**, projetada para gerenciar cursos, instrutores, alunos e matrículas em uma plataforma de ensino online.
-
----
-
-## 🧩 Objetivo
-
-O objetivo deste projeto é criar uma API robusta e escalável para permitir o gerenciamento completo de cursos online, com foco em boas práticas de desenvolvimento backend e relacionamentos entre entidades.
+A **RESTful API** developed in **Java with Spring Boot**, designed to manage courses, instructors, students, and enrollments in an online learning platform.
 
 ---
 
-## 🗂️ Entidades Principais
+## 🧩 Purpose
 
-### 📘 Curso
-- `id`: Long
-- `nome`: String
-- `descricao`: String
-- `cargaHoraria`: Integer
+The goal of this project is to create a robust and scalable API that enables full management of online courses, focusing on backend development best practices and entity relationships.
 
-### 👨‍🏫 Instrutor
+---
+
+## 🗂️ Main Entities
+
+### 📘 Course
 - `id`: Long
-- `nome`: String
+- `name`: String
+- `description`: String
+- `workload`: Integer
+
+### 👨‍🏫 Instructor
+- `id`: Long
+- `name`: String
 - `email`: String
-- `especialidade`: String
+- `specialty`: String
 
-### 👨‍🎓 Aluno
+### 👨‍🎓 Student
 - `id`: Long
-- `nome`: String
+- `name`: String
 - `email`: String
-- `dataNascimento`: LocalDate
+- `birthDate`: LocalDate
 
-### 📝 Matrícula
+### 📝 Enrollment
 - `id`: Long
-- `aluno`: Relacionamento com Aluno
-- `curso`: Relacionamento com Curso
-- `dataMatricula`: LocalDate
+- `student`: Relationship with Student
+- `course`: Relationship with Course
+- `enrollmentDate`: LocalDate
 
 ---
 
-## 📌 Funcionalidades
+## 📌 Features
 
-- CRUD completo para Curso, Instrutor e Aluno
-- Um **Instrutor** pode ministrar vários **Cursos**
-- Um **Aluno** pode se matricular em vários **Cursos**
-- Impedir matrícula duplicada do mesmo aluno no mesmo curso
-- Endpoint para listar todos os cursos de um aluno (por `id`)
-- Endpoint para listar todos os alunos de um curso (por `id`)
-- Respostas padronizadas (evitar retorno direto das entidades JPA)
-- Paginação e ordenação nos endpoints de listagem
+- Full CRUD for Course, Instructor, and Student
+- One **Instructor** can teach multiple **Courses**
+- One **Student** can enroll in multiple **Courses**
+- Prevent duplicate enrollments of the same student in the same course
+- Endpoint to list all courses of a student (by `id`)
+- Endpoint to list all students of a course (by `id`)
+- Standardized API responses (avoid direct return of JPA entities)
+- Pagination and sorting on listing endpoints
 
 ---
 
-## 💽 Tecnologias e Ferramentas
+## 💽 Technologies and Tools
 
 - ☕ **Java 17+**
 - 🌱 **Spring Boot**
 - 📦 **Spring Data JPA**
 - 🐘 **PostgreSQL**
-- 🐳 **Docker** (para ambiente de desenvolvimento e banco)
+- 🐳 **Docker** (for development environment and database)
 - ⚙️ **Maven**
-- 📌 **Lombok** (para reduzir boilerplate)
+- 📌 **Lombok** (to reduce boilerplate code)
 
 ---
 
-## 🚀 Como Executar
+## 🚀 How to Run
 
-### Pré-requisitos
+### Prerequisites
 
 - Java 17+
 - Maven
-- Docker e Docker Compose
+- Docker and Docker Compose
 
-### Passos para rodar o projeto
+### Steps to run the project
 
-1. Clone o repositório:
+1. Clone the repository:
    ```bash
    git clone https://github.com/MayaVictDias/gerenciamento-cursos-online.git
    cd gerenciamento-cursos-online
 
-2. Crie o arquivo docker-compose.yml na raiz do projeto com o seguinte conteúdo:
 
-    ```yaml
-   version: '3.8'
-    services:
-      db:
-        image: postgres:14
-        environment:
-          POSTGRES_DB: cursosdb
-          POSTGRES_USER: postgres
-          POSTGRES_PASSWORD: sua_senha
-        ports:
-          - "5432:5432"
-        volumes:
-          - pgdata:/var/lib/postgresql/data
-    
-    volumes:
-      pgdata:
-
-3. Suba o container do banco PostgreSQL com Docker:
+2. Start the PostgreSQL container using Docker:
     ```bash
    docker-compose up -d
 
-4. Configure o arquivo src/main/resources/application.yml com as informações para conexão ao banco:
-    ```yaml
-   spring:
-      datasource:
-        url: jdbc:postgresql://localhost:5432/cursosdb
-        username: postgres
-        password: sua_senha
-      jpa:
-        hibernate:
-          ddl-auto: update
-        properties:
-          hibernate:
-            format_sql: true
-
-5. Execute a aplicação:
+3. Run the application:
     ```bash
    ./mvnw spring-boot:run
    
-### 🔧 Estrutura do Projeto
+### 🔧 Project Structure
 
 ```pgsql
 src/

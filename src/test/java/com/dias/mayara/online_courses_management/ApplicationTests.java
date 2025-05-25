@@ -1,4 +1,4 @@
-package com.dias.mayara.gerenciamento_cursos_online;
+package com.dias.mayara.online_courses_management;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

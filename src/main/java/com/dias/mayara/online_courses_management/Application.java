@@ -1,4 +1,4 @@
-package com.dias.mayara.gerenciamento_cursos_online;
+package com.dias.mayara.online_courses_management;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
