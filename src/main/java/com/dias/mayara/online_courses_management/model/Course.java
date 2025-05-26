@@ -2,12 +2,14 @@ package com.dias.mayara.online_courses_management.model;
 
 import jakarta.persistence.*;
 import lombok.Data;
-import org.hibernate.validator.constraints.UUID;
 
 @Entity
 @Table(name = "cursos")
 @Data
-public class Curso {
+public class Course {
+
+    public Course() {
+    }
 
     @Id
     @Column(name = "id")
