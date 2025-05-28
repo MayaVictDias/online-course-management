@@ -21,6 +21,12 @@ public class Student {
     @Column(name = "name")
     private String name;
 
+    @ManyToOne
+    private Course course;
+
+    @ManyToOne
+    private Instructor instructor;
+
     @Column(name = "email")
     private String email;
 
