@@ -22,6 +22,6 @@ public class Course {
     @Column(name = "description")
     private String description;
 
-    @Column(name = "worklaod")
+    @Column(name = "workload")
     private String workload;
 }

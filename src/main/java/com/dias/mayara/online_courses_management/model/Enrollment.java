@@ -18,10 +18,10 @@ public class Enrollment {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    @OneToOne
+    @ManyToMany
     private Student student;
 
-    @OneToOne
+    @ManyToMany
     private Course course;
 
     private LocalDate enrollmentDate;
