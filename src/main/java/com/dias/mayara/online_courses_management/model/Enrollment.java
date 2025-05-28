@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import lombok.Data;
 
 import java.time.LocalDate;
+import java.util.List;
 
 @Table(name = "enrollments")
 @Entity
@@ -19,10 +20,10 @@ public class Enrollment {
     private Long id;
 
     @ManyToMany
-    private Student student;
+    private List<Student> student;
 
     @ManyToMany
-    private Course course;
+    private List<Course> course;
 
     private LocalDate enrollmentDate;
 }

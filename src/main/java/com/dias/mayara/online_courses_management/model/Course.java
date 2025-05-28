@@ -1,15 +1,18 @@
 package com.dias.mayara.online_courses_management.model;
 
+import com.dias.mayara.online_courses_management.service.CourseService;
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.ToString;
 
 @Entity
 @Table(name = "cursos")
+@NoArgsConstructor
 @Data
+@ToString
 public class Course {
-
-    public Course() {
-    }
 
     @Id
     @Column(name = "id")
@@ -23,5 +26,6 @@ public class Course {
     private String description;
 
     @Column(name = "workload")
-    private String workload;
+    private double workload;
+
 }
