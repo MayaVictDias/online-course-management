@@ -28,4 +28,9 @@ public class Course {
     @Column(name = "workload")
     private double workload;
 
+    // Relationship with Instructor
+    @ManyToOne
+    @JoinColumn(name = "instructor_id")
+    private Instructor instructor;
+
 }

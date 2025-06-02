@@ -41,11 +41,8 @@ The goal of this project is to create a robust and scalable API that enables ful
 ## ✅ Project Progress
 
 - [x] Full CRUD for Course, Instructor, and Student  
-- [ ] One Instructor can teach multiple Courses  
-- [ ] One Student can enroll in multiple Courses  
-- [ ] Prevent duplicate enrollments of the same student in the same course  
-- [ ] Endpoint to list all courses of a student (by `id`)  
-- [ ] Endpoint to list all students of a course (by `id`)  
+- [x] One Instructor can teach multiple Courses  
+- [x] One Student can enroll in multiple Courses  
 
 
 ---
@@ -98,7 +95,6 @@ src/
 │   │       ├── model/
 │   │       ├── repository/
 │   └── resources/
-│       ├── application.yml
-│       └── data.sql
+│       └── application.yml
 
 ```

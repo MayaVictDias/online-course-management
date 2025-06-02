@@ -14,16 +14,21 @@ public class Enrollment {
     public Enrollment() {
     }
 
+    // Unique identifier for the enrollment
     @Id
     @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    @ManyToMany
-    private List<Student> student;
+    // Relationship with Student and Course entities
+    @ManyToOne
+    @JoinColumn(name = "student_id")
+    private Student student;
 
-    @ManyToMany
-    private List<Course> course;
+    // Relationship with Course entity
+    @ManyToOne
+    @JoinColumn(name = "course_id")
+    private Course course;
 
     private LocalDate enrollmentDate;
 }

@@ -2,11 +2,9 @@ package com.dias.mayara.online_courses_management.service;
 
 import com.dias.mayara.online_courses_management.model.Student;
 import com.dias.mayara.online_courses_management.repository.StudentRepository;
-import com.dias.mayara.online_courses_management.service.StudentService;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Optional;
 
 @Service
 public class StudentService {

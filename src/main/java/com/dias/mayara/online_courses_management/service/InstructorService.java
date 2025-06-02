@@ -2,12 +2,11 @@ package com.dias.mayara.online_courses_management.service;
 
 import com.dias.mayara.online_courses_management.model.Instructor;
 import com.dias.mayara.online_courses_management.repository.InstructorRepository;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public class InstructorService {
 
     // Service to handle instructor-related operations
