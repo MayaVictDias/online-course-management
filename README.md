@@ -43,7 +43,12 @@ The goal of this project is to create a robust and scalable API that enables ful
 - [x] Full CRUD for Course, Instructor, and Student  
 - [x] One Instructor can teach multiple Courses  
 - [x] One Student can enroll in multiple Courses  
-
+- [ ] Use of DTOs for input and output data  
+- [ ] Data validation using `javax.validation` annotations  
+- [ ] Standardized API responses using `ApiResponse` object  
+- [ ] Data update using PUT method  
+- [ ] Audit fields using Spring Data JPA  
+- [ ] Dependency injection with `@RequiredArgsConstructor` (Lombok)  
 
 ---
 
@@ -90,11 +95,14 @@ src/
 ├── main/
 │   ├── java/
 │   │   └── com.exemplo.cursos/
-│   │       ├── controller/
-│   │       ├── service/
-│   │       ├── model/
-│   │       ├── repository/
+│   │       ├── controller/       
+│   │       ├── service/          
+│   │       ├── model/            
+│   │       ├── dto/              
+│   │       ├── mapper/           
+│   │       ├── repository/       
+│   │       └── config/           
 │   └── resources/
-│       └── application.yml
+│       └── application.yml       
 
 ```
