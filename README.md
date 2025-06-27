@@ -94,10 +94,12 @@ The goal of this project is to create a robust and scalable API that enables ful
 src/
 ├── main/
 │   ├── java/
-│   │   └── com.exemplo.cursos/
+│   │   └── com.dias.mayara.online_courses_management/
 │   │       ├── controller/       
-│   │       ├── service/          
-│   │       ├── model/            
+│   │       ├── service/            
+│   │       ├── model/          
+│   │       ├── exceptions/  
+│   │       ├── validator/                      
 │   │       ├── dto/              
 │   │       ├── mapper/           
 │   │       ├── repository/       
